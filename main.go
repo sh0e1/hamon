@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"context"
+	"os"
+
+	"github.com/sh0e1/hamon/internal/cmd"
+)
 
 func main() {
-	fmt.Println("hamon")
+	cmd.Run(context.Background(), cmd.New("hamon"), os.Args[1:])
 }
